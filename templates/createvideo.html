@@ -26,7 +26,7 @@
             </div>
     
             <div class="flex justify-center mt-5">
-                <form method="POST" action="/upload" enctype="multipart/form-data">
+                <!-- <form method="POST" action="/upload" enctype="multipart/form-data">
     
                     <div class="flex flex-col" id="dropdowns">
                         <label for="defaultDurationInput">Default Duration for Images (in seconds): </label>
@@ -56,7 +56,7 @@
                             <option value="1080p">1080p</option>
                         </select>
                     </div>
-                </form>
+                </form> -->
          
             </div>
     
@@ -73,12 +73,39 @@
             <input type="submit" value="Submit">
         </form>
         </form>
-        <button onclick="previewVideo()">Preview Video</button>
 
-        <button onclick="Downloadvideo()">Download Video</button>
+        <button onclick="down()">Preview and Download Video</button>
         <h2 style="color:black; text-align: center;">Pictures</h2>
         <div class="image-grid">
             <form method="post">
+                <div class="flex flex-col" id="dropdowns">
+                    <label for="defaultDurationInput">Default Duration for Images (in seconds): </label>
+                    <input type="number" name="defaultDurationInput" id="defaultDurationInput" min="1" value="5"
+                        class="form-control mb-2 w-full md:w-1/2 mx-auto">
+                    <label for="transitionSelect">Select Transition Effect: </label>
+                    <select id="transitionSelect" name="transitionSelect" class="form-select mb-2 w-full md:w-1/2 mx-auto">
+                        <option value="slide">Slide</option>
+                        <option value="fade">Fade</option>
+                        <option value="circleopen">Circleopen</option>
+                        <option value="slideleft">Slideleft</option>
+                        <option value="slideright">Slideright</option>
+                        <option value="slideup">Slideup</option>
+                        <option value="slidedown">Slidedown</option>
+                        <option value="smoothleft">Smoothleft</option>
+                        <option value="smoothright">Smoothright</option>
+                        <option value="smoothup">Smoothup</option>
+                        <option value="smoothdown">Smoothdown</option>
+                    </select>
+                    <label for="resolutionSelect">Select Video Resolution: </label>
+                    <select id="resolutionSelect" name="resolutionSelect" class="form-select mb-2 w-full md:w-1/2 mx-auto">
+                        <option value="480p">144p</option>
+                        <option value="480p">240p</option>
+                        <option value="480p">360p</option>
+                        <option value="480p">480p</option>
+                        <option value="720p">720p</option>
+                        <option value="1080p">1080p</option>
+                    </select>
+                </div>
                 {% for image in images %}
                     <div class="image-container">
                         <div class="checkbox-wrapper-47">
@@ -106,7 +133,7 @@
             <button class="gallery-button"><a href="/home" class="hidden-link">Go Back</a></button>
         </div>
      </div>
-        <h2 style="color:black; text-align: center;">Pictures</h2>
+        <!-- <h2 style="color:black; text-align: center;">Pictures</h2>
         <div class="image-grid">
             <form method="post">
                 {% for image in images %}
@@ -119,7 +146,7 @@
                 {% endfor %}
                 <button type="submit" class="gallery-button">Select Images</button>
             </form>
-        </div>
+        </div> -->
        
         <div class="upload-image-section">
             <!-- Display uploaded images here -->
@@ -135,6 +162,12 @@
         </div> 
 
     </div>
+    <script>
+        function down()
+        {
+            window.location.href="../static/final.mp4"
+        }
+    </script>
 
 </body>
 </html>
