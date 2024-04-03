@@ -1,0 +1,205 @@
+body {
+    color: #faf7f7; /* Adjusted text color for readability */
+    background-color: rgb(3, 23, 138);
+}
+
+#uploadForm {
+    border: 2px dashed red; /* Red border */
+    padding: 20px;
+    text-align: left; /* Align text to the left */
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 1300px; /* Set the width to create a square */
+    height: 200px; /* Set the height to create a square */
+    margin-right: 20px; /* Add margin for separation */
+    display: none;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add box shadow */
+}
+
+#dropdowns {
+    display: none;
+    margin: 20px;
+}
+
+.gallery-buttons {
+    text-align: left;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.gallery-button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    background-color: rgb(42, 42, 119); /* Green */
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#uploadForm.dragover {
+    border-color: red; /* Red border color when dragged over */
+}
+
+.hidden-link {
+    color: white; /* Hides the link text by making it transparent */
+    text-decoration: none; /* Removes underline */
+}
+
+.image-container {
+    margin-bottom: 20px;
+}
+
+.scaled-image {
+    width: auto; /* Adjusted width for responsiveness */
+    max-height: 300px; /* Added max-width to prevent image overflow */
+    height: 100%;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    border: 5px solid rgb(64, 64, 112); /* Make the border red */
+    transition: transform 0.3s ease; /* Add transition for transform */
+}
+
+.scaled-image:hover {
+    transform: scale(1.1); /* Apply scale transformation on hover */
+}
+
+
+#previewFiles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.preview-container {
+    text-align: left; /* Align text to the left */
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: rgb(56, 56, 175); /* Red background */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add box shadow */
+}
+
+/* Style for image checkbox */
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+}
+
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc; /* Default background color */
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 20px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 2px;
+    bottom: 2px;
+    background-color: red; /* Red color */
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: red; /* Red background when checked */
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px red; /* Red shadow on focus */
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(20px);
+    -ms-transform: translateX(20px);
+    transform: translateX(20px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+#generatedVideo {
+    margin: 1% auto; /* Center the video horizontally */
+    border: 5px solid red; /* Red border */
+    border-radius: 5px; /* Optional: Add border-radius for rounded corners */
+    display: none; /* Display the video even if set to 'none' initially */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add box shadow */
+}
+
+#textprev {
+    text-align: left; /* Align text to the left */
+    margin: 1% 0; /* Adjust the margin as needed */
+    font-size: 3em; /* Adjust the font size as needed */
+    color: #333; /* Adjust the text color for readability */
+    display: none;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add box shadow */
+}
+
+#submit-button {
+    display: none;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+}
+
+.button-container button {
+    transition: background-color 0.3s ease;
+    background-color: rgb(0, 174, 255);
+}
+
+.button-container button:hover {
+    background-color: rgb(0, 123, 139);
+}
+
+/* Custom styles for submit button */
+#submit-button {
+    background-color: red; /* Red background */
+    color: white; /* White text color */
+    font-size: 1em; /* Font size */
+    padding: 10px 20px; /* Padding */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Cursor style */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add box shadow */
+}
+
+#submit-button:hover {
+    background-color: darkred; /* Darker red on hover */
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Admin Page</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Admin Page</h1>
+    {% for user in users %}
+    <h2 style="color:black"> User id:{{ user.id }}</h2>
+    <h2 style="color:black">User: {{ user.username }}</h2>
+    <ul>
+            {% for image in images %}
+            <li style="color:black">{{ image.Image_Id }}</li>
+            {% endfor %}
+    </ul>
+    {% endfor %}
+    </div>
+    <footer style="position: absolute; bottom: 10px; left: 10px;"> 
+        <p>&copy; 2024 Photo Slideshow App</p>
+    </footer>
+</body>
+</html>

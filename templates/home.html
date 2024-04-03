@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Home</title>
+</head>
+<body class="home">
+    <div class="container home" style="background-color: #002c49; text-align: center;"> <!-- Center align the container -->
+        <h1 style="color: #f0f8ff;">Home</h1> <!-- Apply text color from the color palette -->
+        <!-- <form action="/upload" method="post" enctype="multipart/form-data">
+            <input type="file" name="file">  Input field for uploading file </form> -->
+            
+        <a href="/upload" method="POST">
+            <button type="submit" class="button-with-icon">
+                <img src="{{ url_for('static', filename='icons/upload_photo.png') }}" alt="Upload Photo Icon">
+                <span>Upload Images</span></a>
+            </button>
+        </a>
+        <form action="/createvideo" method="get">
+            <button type="submit" class="button-with-icon">
+                <img src="{{ url_for('static', filename='icons/video.png') }}" alt="Video Icon">
+                <span>Create a Video</span>
+            </button>
+        </form>
+    </div>
+</body>
+</html>

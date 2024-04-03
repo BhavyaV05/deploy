@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Login Page</title>
+</head>
+<body>
+    <div class="login-box">
+        <h2 style="color: #f0f8ff; text-align: center"> Login </h2>
+        <form action="/login" method="POST" id="loginForm">
+            <div class="inputbox">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" placeholder="Enter your username" required />
+            </div>
+            <div class="inputbox">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required />
+            </div>
+            <br>
+            <button type="submit" class="loginbutton">Submit</button>
+            <div id="loginMessage" style="color: #f0f8ff; text-align: center;"></div> <!-- Message div -->
+        </form>
+        
+        <br>
+        <p style="color: #f0f8ff; text-align: center;">Don't have an account? <a href="/signup">Sign up</a></p>
+    </div>
+    <footer style="position: absolute; bottom: 10px; left: 10px;"> <!-- Adjusted footer position -->
+        <p>&copy; 2024 Photo Slideshow App</p>
+    </footer>
+    <!-- <script>
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent the form from submitting normally
+            
+            // Get username and password values
+            var username = document.getElementsByName("username")[0].value;
+            var password = document.getElementsByName("password")[0].value;
+
+            // Check if admin login
+            if (username === "admin" && password === "admin") {
+                // Display admin login success message
+                document.getElementById("loginMessage").innerHTML = "Admin Login Success";
+                // Redirect to admin page
+                window.location.href = "/admin";
+            } else {
+                // For other users, redirect to home page
+                window.location.href = "/home";
+            }
+        });
+    </script> -->
+</body>
+</html>

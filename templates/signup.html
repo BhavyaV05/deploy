@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Sign-Up</title>
+</head>
+<body>
+    <div class="login-box">
+        <h2 style="color: #f0f8ff; text-align: center"> Sign Up  </h2>
+        <form action="/signup" method="POST">
+            <div class="inputbox">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" placeholder="Enter your username" required />
+            </div>
+            <div class="inputbox">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required />
+            </div>
+            <div class="inputbox">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required />
+            </div>
+            <div class="inputbox">
+                <label for="email">Email:</label>
+                <input type="text" id="email" name="email" placeholder="Enter your email" required />
+            </div>
+            <br>
+            <button type="submit" class="loginbutton">Submit</button>
+        </form>
+        
+    </div>
+</body>
+</html>

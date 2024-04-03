@@ -1,0 +1,285 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: linear-gradient(#141e30, #243b55);
+    color: #fff; /* Set text color to white */
+}
+
+.container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+    color: #555;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+} */
+
+.login-message {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #e7f3ff;
+    color: #004085;
+    border: 1px solid #b8daff;
+    border-radius: 4px;
+}
+
+.video-preview {
+    margin-top: 20px;
+}
+
+/* Apply the blue background color to the home page container */
+body.home .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    padding: 40px;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+}
+
+/* Additional styles from login.css */
+html {
+    height: 100%;
+}
+
+.login-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    padding: 40px;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+}
+
+.login-box h2 {
+    text-align: center;
+}
+
+.login-box .inputbox input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+}
+
+.login-box .loginbutton {
+    height: 40px;
+    width: 100px;
+    font-size: large;
+    background-color: #002c49;
+    border-radius: 10px;
+    color: #fff;
+    border: none;
+}
+
+.login-box .loginbutton:hover {
+    background-color: #004879;
+}
+
+/* styles.css */
+
+/* Center align the submit button */
+.login-box form,
+.signup-box form, /* Add this selector for signup.html */
+.container form { /* Add this selector for other pages */
+    text-align: center;
+}
+
+/* Center align the buttons */
+button.loginbutton,
+button.signupbutton, /* Add this selector for signup.html */
+button { /* Add this selector for other pages */
+    margin: 0 auto; /* This will center align the button */
+}
+
+/* VIDEOS */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.image-grid {
+    display: flex;
+    /* grid-template-columns: repeat(3, 1fr); */
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.image-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.home-button{
+    background-color: #215170;
+}
+.home-button:hover{
+    background-color: #3a6988;
+}
+.snap2 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    opacity: 0.6;
+    height: 100%;
+    width: 100%;
+    object-fit: cover; 
+    z-index: -1; 
+}
+
+
+.lphead{
+    height:50%;
+    background: linear-gradient(#141e30, #243b55);
+
+}
+.welcome{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    color:aliceblue;
+    font-size:200px;
+}
+.snap{
+    float:right;
+    height:330px;
+    padding-top: 60px;
+    padding-right:20px
+}
+.lpbuttons {
+    text-align: center; /* Center align the content */
+    margin-top: 20px; /* Add margin for spacing */
+    padding-top:50px;
+}
+
+/* Optional: Add styles for the buttons */
+.lpbuttons button {
+    padding: 20px 45px; /* Increase padding to enlarge the buttons */
+    margin: 0 10px; /* Add margin between buttons */
+    background-color: #133d69;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size:30px;
+    text-decoration: none;
+}
+
+.lpbuttons button a {
+    color: #fff; /* Set button text color */
+    text-decoration: none; /* Remove default underline */
+}
+
+.lpbuttons button:hover {
+    background-color: #061a30;
+}
+
+.button-with-icon {
+    display: inline-block;
+    background-color: #007bff; /* Apply button background color */
+    color: #fff; /* Apply button text color */
+    padding: 10px 20px; /* Apply button padding */
+    border: none; /* Remove button border */
+    border-radius: 5px; /* Apply button border radius */
+    text-decoration: none; /* Remove underline */
+    margin-right: 10px; /* Add margin to separate buttons */
+}
+
+.button-with-icon img {
+    width: 20px; /* Set the width of the icon */
+    height: 20px; /* Set the height of the icon */
+    margin-right: 5px; /* Add margin to separate icon and text */
+}
+
+/* Add CSS styles for the image grid */
+
+.image-preview {
+    margin-top: 20px;
+}
+
+img {
+    width: 150px;
+    height: auto;
+    margin: 5px;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.drop-box {
+    border: 2px dashed #ccc; /* Adding border to the drop box */
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+img {
+    width: 150px;
+    height: auto;
+    margin: 5px;
+}

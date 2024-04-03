@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="script" href="{{ url_for('static', filename='createVideo.js') }}">
+    <title>Create Video</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Create Video</h1>
+        <!-- <h4 style="text-align: center; color: black;">Select Audio File</h4>
+        <form action="/createvideo" method="POST" id="audioForm"> -->
+            <!-- <select name="audio_file" id="audioFile">
+                {% for title in audio_titles %}
+                <option value="{{ title }}">{{ title }}</option>
+                {% endfor %}
+            </select> -->
+        <!-- </form>
+        <button onclick="previewVideo()">Preview Video</button>
+        <button onclick="createVideo()">Create Video</button> -->
+        <div class="container mx-auto">
+            <div class="flex justify-center items-center">
+                <h1 class="text-center mt-5 text-4xl inline-block">Video Specifications</h1>
+            </div>
+    
+            <div class="flex justify-center mt-5">
+                <form method="POST" action="/createvideo" enctype="multipart/form-data">
+    
+                    <div class="flex flex-col" id="dropdowns">
+                        <label for="defaultDurationInput">Default Duration for Images (in seconds): </label>
+                        <input type="number" id="defaultDurationInput" min="1" value="5"
+                            class="form-control mb-2 w-full md:w-1/2 mx-auto">
+                        <label for="transitionSelect">Select Transition Effect: </label>
+                        <select id="transitionSelect" class="form-select mb-2 w-full md:w-1/2 mx-auto">
+                            <option value="slide">Slide</option>
+                            <option value="fade">Fade</option>
+                            <option value="circleopen">Circleopen</option>
+                            <option value="slideleft">Slideleft</option>
+                            <option value="slideright">Slideright</option>
+                            <option value="slideup">Slideup</option>
+                            <option value="slidedown">Slidedown</option>
+                            <option value="smoothleft">Smoothleft</option>
+                            <option value="smoothright">Smoothright</option>
+                            <option value="smoothup">Smoothup</option>
+                            <option value="smoothdown">Smoothdown</option>
+                        </select>
+                        <label for="resolutionSelect">Select Video Resolution: </label>
+                        <select id="resolutionSelect" class="form-select mb-2 w-full md:w-1/2 mx-auto">
+                            <option value="480p">144p</option>
+                            <option value="480p">240p</option>
+                            <option value="480p">360p</option>
+                            <option value="480p">480p</option>
+                            <option value="720p">720p</option>
+                            <option value="1080p">1080p</option>
+                        </select>
+                    </div>
+                </form>
+         
+            </div>
+    
+        </div>
+        
+    <div class="container">
+        <h1>Create Video</h1>
+        <h3 style="color: black;">Add Audio</h3>
+        <form action="/add_audio" method="POST" enctype="multipart/form-data">
+            <label for="audio_file">Audio File:</label><br>
+            <input type="file" id="audio_file" name="audio_file"><br>
+            <label for="video_file">Video File:</label><br>
+            <input type="file" id="video_file" name="video_file"><br>
+            <input type="submit" value="Submit">
+        </form>
+        </form>
+        <button onclick="previewVideo()">Preview Video</button>
+        
+        <button href="/download_video">Download Video</button>
+        <h2 style="color:black; text-align: center;">Pictures</h2>
+        <div class="image-grid">
+            <form method="post">
+                {% for image in images %}
+                    <div class="image-container">
+                        <div class="checkbox-wrapper-47">
+                            <img src="data:image/jpeg;base64,{{ image.ImageData }}" alt="Image">
+                            <input type="checkbox" name="delete" id="cb-{{ image.ImageId }}" value="{{ image.ImageId }}"/>
+                        </div>
+                    </div>
+                {% endfor %}
+                <button type="submit" class="gallery-button">Select Images</button>
+            </form>
+        </div>
+       
+        <div class="upload-image-section">
+            <div class="gallery-images">
+                {% if selected_images %}
+                    {% for image in selected_images %}
+                    <div class="image-container">
+                        <img src="data:image/jpeg;base64,{{ image }}" alt="Image">
+                    </div>
+                    {% endfor %}
+                {% endif %}
+            </div>
+        </div>
+        <div class="gallery-buttons">
+            <button class="gallery-button"><a href="/home" class="hidden-link">Go Back</a></button>
+        </div>
+    <!-- </div>
+        <h2 style="color:black; text-align: center;">Pictures</h2>
+        <div class="image-grid">
+            <form method="post">
+                {% for image in images %}
+                    <div class="image-container">
+                        <div class="checkbox-wrapper-47">
+                            <img src="data:image/jpeg;base64,{{ image.ImageData }}" alt="Image">
+                            <input type="checkbox" name="delete" id="cb-{{ image.ImageId }}" value="{{ image.ImageId }}"/>
+                        </div>
+                    </div>
+                {% endfor %}
+                <button type="submit" class="gallery-button">Select Images</button>
+            </form>
+        </div>
+       
+        <div class="upload-image-section">
+            <!-- Display uploaded images here -->
+            <div class="gallery-images">
+                {% if selected_images %}
+                    {% for image in selected_images %}
+                    <div class="image-container">
+                        <img src="data:image/jpeg;base64,{{ image }}" alt="Image">
+                    </div>
+                    {% endfor %}
+                {% endif %}
+            </div>
+        </div> -->
+
+    </div>
+
+</body>
+</html>
+
+
