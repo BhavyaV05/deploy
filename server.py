@@ -28,7 +28,7 @@ bcrypt = Bcrypt(app)
 #     'database': 'snapslide'
 # }
 
-connection = psycopg2.connect(os.environ["DATABASE_URL"]) 
+connection = psycopg2.connect("postgresql://bhavya:Y5tkkZWCIJrFxaOlbFjlKw@wild-impala-8903.8nk.gcp-asia-southeast1.cockroachlabs.cloud:26257/defaultdb?sslmode=verify-full&sslrootcert=root.crt") 
 
 with connection.cursor() as cursor:
     cursor.execute("SELECT now()")
